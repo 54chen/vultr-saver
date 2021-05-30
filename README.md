@@ -27,3 +27,5 @@ Step 3. cd vultr-saver && chmod a+x *.sh
 Step 4. ./step.sh
 
 Step 5. Enjoy it!
+
+## Vultr省钱利器，值得一用 :)
