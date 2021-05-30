@@ -6,7 +6,7 @@ Vultr is a cloud computing platform for some special purpose in China mainland.
 
 ## What is SleepWatcher?
 
-SleepWatcher is a free software in mac, which enable the user to run scripts before their Mac laptop sleeping or waking up.
+SleepWatcher is a free software in Mac, which enable the user to run scripts before their Mac laptop sleeping or waking up.
 
 To install sleepwatcher, run: brew install sleepwather.
 
@@ -14,7 +14,7 @@ To run sleepwatcher, run: brew services start sleepwatcher.
 
 ## What is Vultr-saver?
 
-By the api of Vultr and SleepWatcher, Vultr-saver can destroy your instance when you close your laptop. So you can save at least 50% discount of the server price!
+By the api of Vultr and SleepWatcher, Vultr-saver can destroy your instance when you put your Mac to sleep. So you can save at least 50% discount of the server price!
 
 ## How to use?
 
