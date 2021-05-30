@@ -1,6 +1,7 @@
 #!/bin/sh
 date;
-VULTR_API_KEY=`cat config`
+DIR=`dirname $0`;
+VULTR_API_KEY=`cat ${DIR}/config`
 
 curl -s "https://api.vultr.com/v2/instances" \
   -X GET \

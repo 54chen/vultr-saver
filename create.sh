@@ -1,8 +1,12 @@
 #!/bin/sh
-echo 'carete instance at:'
+echo "\n";
+echo 'create instance at:'
 date;
 echo "\n";
-VULTR_API_KEY=`cat config`
+
+DIR=`dirname $0`;
+VULTR_API_KEY=`cat ${DIR}/config`
+sleep 2;
 curl "https://api.vultr.com/v2/instances" \
   -X POST \
   -H "Authorization: Bearer ${VULTR_API_KEY}" \
