@@ -4,7 +4,9 @@ echo 'create instance at:'
 date;
 echo "\n";
 
-RUNNING=`sh test.sh|sed -n 2p`
+DIR=`dirname $0`;
+
+RUNNING=`sh ${DIR}/test.sh|sed -n 2p`
 
 if [ -n "$RUNNING" ]; then
 	echo "Already running: $RUNNING";
@@ -12,13 +14,12 @@ if [ -n "$RUNNING" ]; then
 fi
 
 FILE_NAME=`date "+%m-%d"`;
-if [ -f "temp/$FILE_NAME" ]; then
+if [ -f "${DIR}/temp/$FILE_NAME" ]; then
 	echo "Already running today, delete temp/$FILE_NAME and create again"
 	exit;
 fi
 
 
-DIR=`dirname $0`;
 VULTR_API_KEY=`cat ${DIR}/config`
 sleep 2;
 curl "https://api.vultr.com/v2/instances" \
@@ -31,4 +32,4 @@ curl "https://api.vultr.com/v2/instances" \
     "snapshot_id" : "061ab18f-0660-4ee1-9d6a-4383c7496796"
   }'
 
-echo $FILE_NAME > temp/$FILE_NAME
+echo $FILE_NAME > ${DIR}/temp/$FILE_NAME
