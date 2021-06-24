@@ -24,7 +24,7 @@ Step 2. Copy the API Key to config file.
 
 Step 3. cd vultr-saver && chmod a+x *.sh
 
-Step 4. ./step.sh
+Step 4. ./setup.sh
 
 Step 5. Enjoy it!
 
