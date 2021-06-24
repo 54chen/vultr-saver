@@ -4,6 +4,15 @@ echo 'create instance at:'
 date;
 echo "\n";
 
+RUNNING=`sh test.sh|sed -n 2p`
+
+if [ -n $RUNNING ]; then
+
+	echo "Already running: $RUNNING";
+	exit;
+fi
+
+
 DIR=`dirname $0`;
 VULTR_API_KEY=`cat ${DIR}/config`
 sleep 2;

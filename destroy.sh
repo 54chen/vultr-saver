@@ -3,7 +3,6 @@ echo "\n";
 echo 'destroy instance at';
 date;
 echo "\n";
-
 DIR=`dirname $0`;
 VULTR_API_KEY=`cat ${DIR}/config`
 
